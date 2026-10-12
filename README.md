@@ -78,13 +78,13 @@ alerts:
 
 Each binding key is the renderer reference. A light or switch `target` is the floorplan room ID where its visual marker is placed. A door-contact `target` is the connector ID, or the paired connector ID produced by joining both connector IDs with `--`. `kind` is inferred as `light` for `light.*` and `switch.*` entities and `door-contact` otherwise. Bindings and alert targets are checked against the loaded floorplan and show an error if unresolved.
 
-Supported actions are `toggle`, `more-info`, and `none`. Light bindings default to tap `toggle` and hold `more-info`; door contacts default to `more-info` for both. Toggle is limited to `light` and `switch` entities. Alerts are display rules only: define security/alarm conditions in Home Assistant and bind the resulting alert entity here.
+Supported actions are `toggle`, `more-info`, and `none`. Light bindings default to tap `toggle` and hold `more-info`; door contacts default to `more-info` for both. Toggle supports `light`, `switch`, and `input_boolean` entities. For a virtual light helper, bind an `input_boolean` with `kind: light`; for a virtual door contact, bind it with `kind: door-contact`. Alerts are display rules only: define security/alarm conditions in Home Assistant and bind the resulting alert entity here.
 
 Supported alert effects are `flash`, `pulse`, `highlight`, `room-wash`, and `camera-focus`. Effects target room IDs; `color` (or `colour`) and `priority` are optional. Reduced-motion preferences disable rapid animation.
 
 ## Scope and limitations
 
-- The card supports visualization, light and door-contact state display, configured light/switch toggles, more-info, and entity-driven alert effects.
+- The card supports visualization, light and door-contact state display, configured light/switch/input_boolean toggles, more-info, and entity-driven alert effects.
 - A YAML configuration editor, automated browser testing, and HACS release validation are not yet included.
 - The initial supported floorplan schema is `2.x`; malformed configurations and failed floorplan requests are shown in the card rather than leaving a blank canvas.
 - Home Assistant automations remain responsible for deciding whether events constitute warnings or alarms.

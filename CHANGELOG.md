@@ -8,6 +8,7 @@
 ## 0.5.0
 
 - Add the Home Assistant Lovelace card and Home Assistant state/action adapters.
+- Allow input_boolean helpers to act as virtual lights or door contacts.
 - Load external floorplans, map entity updates to the renderer, and support configured tap/hold actions and alert effects.
 - Add renderer resize handling and teardown for Home Assistant card lifecycle.
 - Add HACS manifest, bundled-card build, configuration/state tests, and installation documentation.

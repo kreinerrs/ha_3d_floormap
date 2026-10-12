@@ -69,8 +69,8 @@ class el {
   }
   async toggle(t) {
     const e = t.split(".")[0];
-    if (!e || !["light", "switch"].includes(e))
-      throw new Error(`Toggle is only supported for light and switch entities: ${t}`);
+    if (!e || !["light", "switch", "input_boolean"].includes(e))
+      throw new Error(`Toggle is only supported for light, switch, and input_boolean entities: ${t}`);
     await this.hass.callService(e, "toggle", { entity_id: t });
   }
   moreInfo(t) {

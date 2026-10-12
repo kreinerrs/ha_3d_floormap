@@ -10,8 +10,8 @@ export class HomeAssistantActionProvider implements ActionProvider {
 
   async toggle(entityId: string): Promise<void> {
     const domain = entityId.split('.')[0];
-    if (!domain || !['light', 'switch'].includes(domain)) {
-      throw new Error(`Toggle is only supported for light and switch entities: ${entityId}`);
+    if (!domain || !['light', 'switch', 'input_boolean'].includes(domain)) {
+      throw new Error(`Toggle is only supported for light, switch, and input_boolean entities: ${entityId}`);
     }
     await this.hass.callService(domain, 'toggle', { entity_id: entityId });
   }

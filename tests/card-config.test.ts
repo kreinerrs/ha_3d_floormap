@@ -48,4 +48,20 @@ describe('Home Assistant card configuration', () => {
       camera: { allow_zoom: 'yes' },
     })).toThrow('allow_zoom must be true or false');
   });
+
+  it('allows an input_boolean helper to be configured as a virtual light', () => {
+    const parsed = parseCardConfig({
+      type: 'custom:three-floorplan-card',
+      floorplan: '/local/home.json',
+      bindings: {
+        virtualLight: {
+          entity: 'input_boolean.virtual_living_room_light',
+          kind: 'light',
+          target: 'living-room',
+        },
+      },
+    });
+    expect(parsed.bindings[0].kind).toBe('light');
+    expect(parsed.actions.get('virtualLight')?.tap).toBe('toggle');
+  });
 });
