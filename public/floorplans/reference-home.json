@@ -1,0 +1,601 @@
+{
+  "schemaVersion": "2.14",
+  "id": "reference-home",
+  "name": "Reference Home",
+  "rooms": [
+    {
+      "id": "living",
+      "name": "Living Room",
+      "type": "living-room",
+      "sizeCategory": "large",
+      "connectors": [
+        {
+          "id": "living-right-passage",
+          "roomId": "living",
+          "side": "right",
+          "type": "open-passage",
+          "position": 0.4167,
+          "offset": 1.75
+        },
+        {
+          "id": "living-left-door",
+          "roomId": "living",
+          "side": "left",
+          "type": "door",
+          "position": 0.3966,
+          "offset": 1.6659,
+          "door": {
+            "hinge": "left",
+            "swing": "inward",
+            "openAngle": 70
+          }
+        },
+        {
+          "id": "living-bottom-door-2",
+          "roomId": "living",
+          "side": "bottom",
+          "type": "door",
+          "position": 0.175,
+          "offset": 1.05,
+          "door": {
+            "hinge": "right",
+            "swing": "outward",
+            "openAngle": 80
+          }
+        }
+      ],
+      "layout": {
+        "x": 6.2,
+        "y": -0.8,
+        "width": 6,
+        "height": 4.2
+      }
+    },
+    {
+      "id": "dining",
+      "name": "Dining Room",
+      "type": "dining-room",
+      "sizeCategory": "medium",
+      "connectors": [
+        {
+          "id": "dining-left-passage",
+          "roomId": "dining",
+          "side": "left",
+          "type": "open-passage",
+          "position": 0.4167,
+          "offset": 1.75
+        },
+        {
+          "id": "dining-bottom-door",
+          "roomId": "dining",
+          "side": "bottom",
+          "type": "door",
+          "position": 0.2072,
+          "offset": 0.8289,
+          "door": {
+            "hinge": "right",
+            "swing": "inward",
+            "openAngle": 50
+          }
+        },
+        {
+          "id": "dining-top-open-passage",
+          "roomId": "dining",
+          "side": "top",
+          "type": "window",
+          "position": 0.7061,
+          "offset": 2.8245
+        },
+        {
+          "id": "dining-right-open-passage",
+          "roomId": "dining",
+          "side": "right",
+          "type": "open-passage",
+          "position": 0.4286,
+          "offset": 1.8
+        },
+        {
+          "id": "dining-right-door",
+          "roomId": "dining",
+          "side": "right",
+          "type": "open-passage",
+          "position": 0.8452,
+          "offset": 3.5499
+        }
+      ],
+      "layout": {
+        "x": 12.2,
+        "y": -0.8,
+        "width": 4,
+        "height": 4.2
+      }
+    },
+    {
+      "id": "kitchen",
+      "name": "Kitchen",
+      "type": "kitchen",
+      "sizeCategory": "medium",
+      "connectors": [
+        {
+          "id": "kitchen-top-door",
+          "roomId": "kitchen",
+          "side": "top",
+          "type": "window",
+          "position": 0.5,
+          "offset": 2
+        },
+        {
+          "id": "kitchen-left-open-passage",
+          "roomId": "kitchen",
+          "side": "left",
+          "type": "open-passage",
+          "position": 0.6,
+          "offset": 1.8
+        }
+      ],
+      "layout": {
+        "x": 16.2,
+        "y": -0.8,
+        "width": 4,
+        "height": 3
+      }
+    },
+    {
+      "id": "outside",
+      "name": "Outside",
+      "type": "other",
+      "sizeCategory": "small",
+      "connectors": [
+        {
+          "id": "outside-left-door",
+          "roomId": "outside",
+          "side": "left",
+          "type": "door",
+          "position": 0.225,
+          "offset": 0.45
+        }
+      ],
+      "layout": {
+        "x": 20.2,
+        "y": 2.6,
+        "width": 3,
+        "height": 2
+      }
+    },
+    {
+      "id": "playroom",
+      "name": "Playroom",
+      "type": "other",
+      "sizeCategory": "large",
+      "connectors": [
+        {
+          "id": "playroom-right-door",
+          "roomId": "playroom",
+          "side": "right",
+          "type": "door",
+          "position": 0.3966,
+          "offset": 1.6659,
+          "door": {
+            "hinge": "right",
+            "swing": "outward",
+            "openAngle": 70
+          }
+        },
+        {
+          "id": "playroom-bottom-door",
+          "roomId": "playroom",
+          "side": "bottom",
+          "type": "door",
+          "position": 0.7167,
+          "offset": 4.3,
+          "door": {
+            "hinge": "left",
+            "swing": "inward",
+            "openAngle": 85
+          }
+        }
+      ],
+      "layout": {
+        "x": 0.2,
+        "y": -0.8,
+        "width": 6,
+        "height": 4.2
+      }
+    },
+    {
+      "id": "small-hall",
+      "name": "Small Hall",
+      "type": "hall",
+      "sizeCategory": "small",
+      "connectors": [
+        {
+          "id": "small-hall-top-door",
+          "roomId": "small-hall",
+          "side": "top",
+          "type": "door",
+          "position": 0.7,
+          "offset": 1.05,
+          "door": {
+            "hinge": "left",
+            "swing": "inward",
+            "openAngle": 80
+          }
+        },
+        {
+          "id": "small-hall-right-door",
+          "roomId": "small-hall",
+          "side": "right",
+          "type": "door",
+          "position": 0.775,
+          "offset": 1.55,
+          "door": {
+            "hinge": "right",
+            "swing": "outward",
+            "openAngle": 60
+          }
+        },
+        {
+          "id": "small-hall-bottom-door",
+          "roomId": "small-hall",
+          "side": "bottom",
+          "type": "door",
+          "position": 0.7,
+          "offset": 1.05,
+          "door": {
+            "hinge": "right",
+            "swing": "inward",
+            "openAngle": 45
+          }
+        },
+        {
+          "id": "small-hall-left-door",
+          "roomId": "small-hall",
+          "side": "left",
+          "type": "door",
+          "position": 0.2266,
+          "offset": 0.4532,
+          "door": {
+            "hinge": "right",
+            "swing": "outward",
+            "openAngle": 80
+          }
+        }
+      ],
+      "layout": {
+        "x": 6.2,
+        "y": 3.4,
+        "width": 1.5,
+        "height": 2
+      }
+    },
+    {
+      "id": "bath",
+      "name": "Bath",
+      "type": "bathroom",
+      "sizeCategory": "medium",
+      "connectors": [
+        {
+          "id": "bath-top-door",
+          "roomId": "bath",
+          "side": "top",
+          "type": "door",
+          "position": 0.7658,
+          "offset": 3.8289,
+          "door": {
+            "hinge": "left",
+            "swing": "outward",
+            "openAngle": 50
+          }
+        },
+        {
+          "id": "bath-bottom-door",
+          "roomId": "bath",
+          "side": "bottom",
+          "type": "door",
+          "position": 0.1814,
+          "offset": 0.9069,
+          "door": {
+            "hinge": "right",
+            "swing": "outward",
+            "openAngle": 35
+          }
+        }
+      ],
+      "layout": {
+        "x": 9.2,
+        "y": 3.4,
+        "width": 5,
+        "height": 2
+      }
+    },
+    {
+      "id": "toilet",
+      "name": "Toilet",
+      "type": "bathroom",
+      "sizeCategory": "small",
+      "connectors": [
+        {
+          "id": "toilet-left-door",
+          "roomId": "toilet",
+          "side": "left",
+          "type": "door",
+          "position": 0.775,
+          "offset": 1.55,
+          "door": {
+            "hinge": "left",
+            "swing": "inward",
+            "openAngle": 60
+          }
+        }
+      ],
+      "layout": {
+        "x": 7.7,
+        "y": 3.4,
+        "width": 1.5,
+        "height": 2
+      }
+    },
+    {
+      "id": "main-bedroom",
+      "name": "Main Bedroom",
+      "type": "bedroom",
+      "sizeCategory": "medium",
+      "connectors": [
+        {
+          "id": "main-bedroom-right-door",
+          "roomId": "main-bedroom",
+          "side": "right",
+          "type": "door",
+          "position": 0.4306,
+          "offset": 1.55
+        },
+        {
+          "id": "main-bedroom-top-door",
+          "roomId": "main-bedroom",
+          "side": "top",
+          "type": "door",
+          "position": 0.6983,
+          "offset": 4.05,
+          "door": {
+            "hinge": "left",
+            "swing": "outward",
+            "openAngle": 45
+          }
+        }
+      ],
+      "layout": {
+        "x": 3.2,
+        "y": 5.4,
+        "width": 5.8,
+        "height": 3.6
+      }
+    },
+    {
+      "id": "bedroom-front",
+      "name": "Bedroom Front",
+      "type": "bedroom",
+      "sizeCategory": "medium",
+      "connectors": [
+        {
+          "id": "bedroom-front-left-door",
+          "roomId": "bedroom-front",
+          "side": "left",
+          "type": "door",
+          "position": 0.4306,
+          "offset": 1.55
+        },
+        {
+          "id": "bedroom-front-top-door",
+          "roomId": "bedroom-front",
+          "side": "top",
+          "type": "door",
+          "position": 0.2129,
+          "offset": 1.1069,
+          "door": {
+            "hinge": "left",
+            "swing": "inward",
+            "openAngle": 35
+          }
+        }
+      ],
+      "layout": {
+        "x": 9,
+        "y": 5.4,
+        "width": 5.2,
+        "height": 3.6
+      }
+    },
+    {
+      "id": "front-hall",
+      "name": "Front Hall",
+      "type": "hall",
+      "sizeCategory": "medium",
+      "connectors": [
+        {
+          "id": "front-hall-left-door",
+          "roomId": "front-hall",
+          "side": "left",
+          "type": "open-passage",
+          "position": 0.4583,
+          "offset": 0.55
+        },
+        {
+          "id": "front-hall-right-door",
+          "roomId": "front-hall",
+          "side": "right",
+          "type": "door",
+          "position": 0.625,
+          "offset": 0.75
+        }
+      ],
+      "layout": {
+        "x": 16.2,
+        "y": 2.2,
+        "width": 4,
+        "height": 1.2
+      }
+    },
+    {
+      "id": "laundry",
+      "name": "Laundry",
+      "type": "hall",
+      "sizeCategory": "small",
+      "connectors": [
+        {
+          "id": "laundry-right-door",
+          "roomId": "laundry",
+          "side": "right",
+          "type": "door",
+          "position": 0.2266,
+          "offset": 0.4532,
+          "door": {
+            "hinge": "left",
+            "swing": "inward",
+            "openAngle": 80
+          }
+        },
+        {
+          "id": "laundry-top-door",
+          "roomId": "laundry",
+          "side": "top",
+          "type": "door",
+          "position": 0.4333,
+          "offset": 1.3,
+          "door": {
+            "hinge": "right",
+            "swing": "outward",
+            "openAngle": 85
+          }
+        },
+        {
+          "id": "laundry-left-door",
+          "roomId": "laundry",
+          "side": "left",
+          "type": "door",
+          "position": 0.5,
+          "offset": 1
+        }
+      ],
+      "layout": {
+        "x": 3.2,
+        "y": 3.4,
+        "width": 3,
+        "height": 2
+      }
+    },
+    {
+      "id": "hottub",
+      "name": "Hottub",
+      "type": "other",
+      "sizeCategory": "small",
+      "connectors": [
+        {
+          "id": "hottub-right-door",
+          "roomId": "hottub",
+          "side": "right",
+          "type": "door",
+          "position": 0.4167,
+          "offset": 1
+        }
+      ],
+      "layout": {
+        "x": 0.2,
+        "y": 3.4,
+        "width": 3,
+        "height": 2.4
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "id": "living-dining",
+      "connectorA": "living-right-passage",
+      "connectorB": "dining-left-passage",
+      "importance": "required"
+    },
+    {
+      "id": "living-left-door--playroom-right-door",
+      "connectorA": "playroom-right-door",
+      "connectorB": "living-left-door",
+      "importance": "required"
+    },
+    {
+      "id": "dining-right-open-passage--kitchen-left-open-passage",
+      "connectorA": "kitchen-left-open-passage",
+      "connectorB": "dining-right-open-passage",
+      "importance": "required"
+    },
+    {
+      "id": "living-bottom-door-2--small-hall-top-door",
+      "connectorA": "living-bottom-door-2",
+      "connectorB": "small-hall-top-door",
+      "importance": "required"
+    },
+    {
+      "id": "small-hall-right-door--toilet-left-door",
+      "connectorA": "toilet-left-door",
+      "connectorB": "small-hall-right-door",
+      "importance": "required"
+    },
+    {
+      "id": "main-bedroom-top-door--small-hall-bottom-door",
+      "connectorA": "main-bedroom-top-door",
+      "connectorB": "small-hall-bottom-door",
+      "importance": "required"
+    },
+    {
+      "id": "bedroom-front-left-door--main-bedroom-right-door",
+      "connectorA": "main-bedroom-right-door",
+      "connectorB": "bedroom-front-left-door",
+      "importance": "required"
+    },
+    {
+      "id": "bath-bottom-door--bedroom-front-top-door",
+      "connectorA": "bedroom-front-top-door",
+      "connectorB": "bath-bottom-door",
+      "importance": "required"
+    },
+    {
+      "id": "bath-top-door--dining-bottom-door",
+      "connectorA": "bath-top-door",
+      "connectorB": "dining-bottom-door",
+      "importance": "required"
+    },
+    {
+      "id": "front-hall-right-door--outside-left-door",
+      "connectorA": "front-hall-right-door",
+      "connectorB": "outside-left-door",
+      "importance": "required"
+    },
+    {
+      "id": "dining-right-door--front-hall-left-door",
+      "connectorA": "dining-right-door",
+      "connectorB": "front-hall-left-door",
+      "importance": "required"
+    },
+    {
+      "id": "laundry-top-door--playroom-bottom-door",
+      "connectorA": "laundry-top-door",
+      "connectorB": "playroom-bottom-door",
+      "importance": "required"
+    },
+    {
+      "id": "laundry-right-door--small-hall-left-door",
+      "connectorA": "small-hall-left-door",
+      "connectorB": "laundry-right-door",
+      "importance": "required"
+    },
+    {
+      "id": "laundry-left-door--hottub-right-door",
+      "connectorA": "laundry-left-door",
+      "connectorB": "hottub-right-door",
+      "importance": "required"
+    }
+  ],
+  "wallAlignments": [],
+  "buildingDefaults": {
+    "wallThickness": 0.16,
+    "wallHeight": 2.4,
+    "floorThickness": 0.12
+  }
+}

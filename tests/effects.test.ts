@@ -1,0 +1,1 @@
+import{describe,it,expect}from'vitest';import{active}from'../src/core/effects';it('evaluates compound rules',()=>expect(active({id:'x',all:[{entity:'door',state:'on'}],effects:[]},{getState:()=> 'on'})).toBe(true));

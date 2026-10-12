@@ -1,0 +1,1 @@
+{"rules":[{"id":"bedroom-alert","all":[{"entity":"binary_sensor.bedroom_door","state":"on"}],"effects":[{"target":"bedroom-front","effect":"flash","color":"#ff2020","intervalMs":450,"priority":10},{"target":"main-bedroom","effect":"room-wash","color":"#ff2020","intervalMs":700,"priority":5},{"target":"bedroom-front","effect":"camera-focus","priority":10}]}]}
