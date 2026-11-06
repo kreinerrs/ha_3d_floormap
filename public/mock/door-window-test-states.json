@@ -1,0 +1,10 @@
+{
+  "bindings": [
+    { "ref": "room-1-left-door-2-lock", "entityId": "lock.room_1_door", "targetId": "room-1-left-door-2", "kind": "lock" },
+    { "ref": "room-2-top-door-lock-2", "entityId": "lock.room_2_door", "targetId": "room-2-top-door", "kind": "lock" }
+  ],
+  "states": [
+    { "entity_id": "lock.room_1_door", "state": "locked", "attributes": {} },
+    { "entity_id": "lock.room_2_door", "state": "unlocked", "attributes": {} }
+  ]
+}

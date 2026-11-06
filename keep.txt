@@ -1,0 +1,35 @@
+#include <Arduino.h>
+#include <esp_chip_info.h>
+#include <esp_flash.h>
+
+void setup() {
+    Serial.begin(115200);
+    delay(1000);
+
+    Serial.println();
+    Serial.println("=== KaiBox ESP32 Hardware Check ===");
+
+    esp_chip_info_t chip;
+    esp_chip_info(&chip);
+
+    Serial.printf("CPU cores:      %d\n", chip.cores);
+    Serial.printf("Chip revision:  %d\n", chip.revision);
+    Serial.printf("CPU frequency:  %d MHz\n", getCpuFrequencyMhz());
+
+    uint32_t flashSize = 0;
+    esp_flash_get_size(nullptr, &flashSize);
+
+    Serial.printf("Flash size:     %lu MB\n",
+                  (unsigned long)(flashSize / (1024 * 1024)));
+
+    Serial.printf("Heap total:     %u bytes\n", ESP.getHeapSize());
+    Serial.printf("Heap free:      %u bytes\n", ESP.getFreeHeap());
+
+    Serial.printf("PSRAM size:     %u bytes\n", ESP.getPsramSize());
+    Serial.printf("PSRAM free:     %u bytes\n", ESP.getFreePsram());
+
+    Serial.println("==============================");
+}
+
+void loop() {
+}

@@ -1,1 +1,107 @@
-{"bindings":[{"ref":"dining-main","entityId":"light.dining","targetId":"dining","kind":"light","placement":{"height":2.2}},{"ref":"bedroom-door","entityId":"binary_sensor.bedroom_door","targetId":"bedroom-front-left-door--main-bedroom-right-door","kind":"door-contact"}],"states":[{"entity_id":"light.dining","state":"on","attributes":{"brightness":190,"rgb_color":[255,205,140]}},{"entity_id":"binary_sensor.bedroom_door","state":"off","attributes":{"device_class":"door"}}]}
+{
+  "bindings": [
+    {
+      "ref": "dining-ceiling-light",
+      "entityId": "light.dining",
+      "targetId": "dining",
+      "kind": "light"
+    },
+    {
+      "ref": "bedroom-door-contact",
+      "entityId": "binary_sensor.bedroom_door",
+      "targetId": "bedroom-front-left-door",
+      "kind": "door-contact"
+    },
+    {
+      "ref": "kitchen-window-contact",
+      "entityId": "binary_sensor.kitchen_window",
+      "targetId": "kitchen-top-door",
+      "kind": "door-contact"
+    },
+    {
+      "ref": "patio-door-contact",
+      "entityId": "binary_sensor.patio_door",
+      "targetId": "front-hall-right-door",
+      "kind": "door-contact"
+    },
+    {
+      "ref": "living-environment-sensor",
+      "entityId": "sensor.living_environment",
+      "targetId": "living",
+      "kind": "environment-sensor",
+      "display": "label-value"
+    },
+    {
+      "ref": "dining-humidity",
+      "entityId": "sensor.dining_humidity",
+      "targetId": "dining",
+      "kind": "environment-sensor",
+      "display": "label-value",
+      "label": "Dining"
+    },
+    {
+      "ref": "kitchen-blind",
+      "entityId": "cover.kitchen_blind",
+      "targetId": "kitchen-top-door",
+      "kind": "cover"
+    }
+  ],
+  "states": [
+    {
+      "entity_id": "light.dining",
+      "state": "on",
+      "attributes": {
+        "brightness": 190,
+        "rgb_color": [255, 205, 140]
+      }
+    },
+    {
+      "entity_id": "binary_sensor.bedroom_door",
+      "state": "off",
+      "attributes": {
+        "device_class": "door"
+      }
+    },
+    {
+      "entity_id": "binary_sensor.kitchen_window",
+      "state": "off",
+      "attributes": {
+        "device_class": "window"
+      }
+    },
+    {
+      "entity_id": "binary_sensor.patio_door",
+      "state": "off",
+      "attributes": {
+        "device_class": "door"
+      }
+    },
+    {
+      "entity_id": "sensor.living_environment",
+      "state": "21.4",
+      "attributes": {
+        "temperature": 21.4,
+        "humidity": 48,
+        "carbon_dioxide": 620,
+        "illuminance": 315,
+        "pressure": 1013,
+        "voc": 85
+      }
+    },
+    {
+      "entity_id": "sensor.dining_humidity",
+      "state": "48",
+      "attributes": {
+        "unit_of_measurement": "%",
+        "device_class": "humidity"
+      }
+    },
+    {
+      "entity_id": "cover.kitchen_blind",
+      "state": "open",
+      "attributes": {
+        "current_position": 65
+      }
+    }
+  ]
+}

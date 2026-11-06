@@ -16,7 +16,7 @@ Do not rewrite the renderer specifically for Home Assistant. Add a thin Home Ass
 
 ## 2. Current scope
 
-The current implementation covers the foundations developed through Milestone 4:
+The current implementation covers the foundations developed through Milestone 4 and the initial Home Assistant card:
 
 - External floorplan JSON loading
 - External visual configuration
@@ -34,10 +34,13 @@ The current implementation covers the foundations developed through Milestone 4:
 - Effect priority handling
 - Reduced-motion behaviour
 - Support for building-level physical defaults
+- Home Assistant light and door-contact placements with animated door leaves
+- Motion/presence sensor coverage, plus optional entity-reported position markers
+- Optional sun/moon compass artwork and sun-directed scene lighting
 
-The initial Home Assistant custom-card adapter and HACS packaging are now implemented in this project. The core renderer is still shared with the standalone mock host. Outstanding release work includes browser testing in Home Assistant, HACS validation, a card editor, and confirmation that the repository name remains `ha_3d_floormap` (the built plugin filename must match it).
+The Home Assistant custom-card adapter and HACS packaging are implemented in this project. The core renderer is still shared with the standalone mock host. Outstanding release work includes browser testing in Home Assistant, HACS validation, a card editor, and confirmation that the repository name remains `ha_3d_floormap` (the built plugin filename must match it).
 
-The initial card configuration is YAML-based. It supports external floorplan URLs, entity bindings, light/switch toggle and more-info actions, door-contact state, and alert effects. The renderer now owns a `ResizeObserver` and animation lifecycle that is cleaned up when the card disconnects.
+The card configuration is YAML-based. It supports external floorplan URLs, entity bindings, light/switch toggle and more-info actions, door-contact state, sensor coverage, optional reported positions and celestial artwork. Bearings use top = 0° and clockwise increasing. `northDegrees` is the compass bearing of the floorplan's top edge. When available, sun azimuth/elevation set the scene's directional-light and shadow direction; a moon entity only drives artwork. The renderer owns a `ResizeObserver` and animation lifecycle that is cleaned up when the card disconnects.
 
 ---
 
@@ -491,38 +494,24 @@ Physical or semantic placement belongs in the floorplan. Home Assistant entity I
 
 ```json
 {
-  "id": "dining-main-light-placement",
-  "kind": "light",
-  "entityRef": "dining-main",
-  "attachment": {
-    "targetType": "room",
-    "targetId": "dining",
-    "anchor": "ceiling-centre",
-    "height": 2.3
-  },
-  "visualAdjustment": {
-    "offset": [0.0, -0.05, 0.0],
-    "rotation": [0, 0, 0],
-    "scale": 1.0
-  }
+  "entityPlacements": [
+    {
+      "id": "dining-ceiling-light",
+      "type": "light",
+      "roomId": "dining",
+      "position": [14.2, 1.3],
+      "height": 2.2
+    },
+    {
+      "id": "bedroom-door-contact",
+      "type": "door-contact",
+      "connectorId": "bedroom-front-left-door"
+    }
+  ]
 }
 ```
 
-Suggested anchors:
-
-```text
-centre
-ceiling-centre
-floor-centre
-wall-centre
-corner-top-left
-corner-top-right
-frame-top
-connector-centre
-custom
-```
-
-Use semantic anchors whenever possible. Use explicit coordinates only when semantic placement is insufficient.
+Light `position` uses the floorplan's `[x, y]` coordinate system and must fall inside the referenced room. Door contacts reference a door connector; the matching rendered door is found through that connector, including paired connectors.
 
 ### 7.3 Home Assistant binding
 

@@ -1,0 +1,685 @@
+{
+  "schemaVersion": "3.0",
+  "rooms": [
+    {
+      "id": "room-1",
+      "name": "Room 1",
+      "sizeCategory": "medium",
+      "connectors": [
+        {
+          "id": "room-1-left-door",
+          "roomId": "room-1",
+          "side": "left",
+          "type": "door",
+          "position": 0.2145,
+          "offset": 0.783,
+          "door": {
+            "hinge": "right",
+            "swing": "outward",
+            "openAngle": 85
+          },
+          "width": 0.9
+        },
+        {
+          "id": "room-1-left-door-2",
+          "roomId": "room-1",
+          "side": "left",
+          "type": "door",
+          "position": 0.6496,
+          "offset": 2.371,
+          "width": 1.6,
+          "door": {
+            "hinge": "left",
+            "swing": "inward",
+            "openAngle": 40
+          }
+        },
+        {
+          "id": "room-1-top-door",
+          "roomId": "room-1",
+          "side": "top",
+          "type": "door",
+          "position": 0.6429,
+          "offset": 1.35,
+          "door": {
+            "hinge": "left",
+            "swing": "outward",
+            "openAngle": 85
+          },
+          "glazing": "glass",
+          "width": 0.9
+        },
+        {
+          "id": "room-1-right-door",
+          "roomId": "room-1",
+          "side": "right",
+          "type": "open-passage",
+          "position": 0.4882,
+          "offset": 1.7821,
+          "width": 2
+        },
+        {
+          "id": "room-1-bottom-window",
+          "roomId": "room-1",
+          "side": "bottom",
+          "type": "window",
+          "position": 0.5238,
+          "offset": 1.1,
+          "window": {
+            "type": "hinged",
+            "sillHeight": 0.8,
+            "headHeight": 2.1,
+            "frameDepth": 0.08
+          },
+          "width": 1.2
+        }
+      ],
+      "layout": {
+        "x": 2.35,
+        "y": 0,
+        "width": 2.1,
+        "height": 3.65,
+        "sizeLocked": false,
+        "positionLocked": false
+      },
+      "wallHeights": {
+        "left": 3,
+        "bottom": 3,
+        "top": 3
+      },
+      "floor": "floor-1"
+    },
+    {
+      "id": "room-2",
+      "name": "Room 2",
+      "type": "other",
+      "sizeCategory": "medium",
+      "connectors": [
+        {
+          "id": "room-2-right-door",
+          "roomId": "room-2",
+          "side": "right",
+          "type": "door",
+          "position": 0.2145,
+          "offset": 0.783,
+          "door": {
+            "hinge": "left",
+            "swing": "inward",
+            "openAngle": 85
+          },
+          "width": 0.9
+        },
+        {
+          "id": "room-2-top-door",
+          "roomId": "room-2",
+          "side": "top",
+          "type": "door",
+          "position": 0.5374,
+          "offset": 1.2628,
+          "glazing": "glass",
+          "width": 0.9,
+          "door": {
+            "hinge": "left",
+            "swing": "inward",
+            "openAngle": 85
+          }
+        },
+        {
+          "id": "room-2-right-door-2",
+          "roomId": "room-2",
+          "side": "right",
+          "type": "door",
+          "position": 0.6496,
+          "offset": 2.371,
+          "width": 1.6,
+          "door": {
+            "hinge": "right",
+            "swing": "outward",
+            "openAngle": 40
+          }
+        },
+        {
+          "id": "room-2-bottom-window",
+          "roomId": "room-2",
+          "side": "bottom",
+          "type": "window",
+          "position": 0.5319,
+          "offset": 1.25,
+          "window": {
+            "type": "tilt",
+            "sillHeight": 0.8,
+            "headHeight": 2.1,
+            "frameDepth": 0.08
+          },
+          "width": 1.2
+        }
+      ],
+      "layout": {
+        "x": 0,
+        "y": 0,
+        "width": 2.35,
+        "height": 3.65,
+        "sizeLocked": true
+      },
+      "wallHeights": {
+        "right": 3
+      },
+      "outline": [
+        [
+          0.35,
+          0
+        ],
+        [
+          2.35,
+          0
+        ],
+        [
+          2.35,
+          3.65
+        ],
+        [
+          0.35,
+          3.65
+        ],
+        [
+          0.35,
+          2.15
+        ],
+        [
+          0,
+          2.15
+        ],
+        [
+          0,
+          1.15
+        ],
+        [
+          0.35,
+          1.15
+        ]
+      ],
+      "floor": "floor-1"
+    },
+    {
+      "id": "room-3",
+      "name": "Room 3",
+      "type": "other",
+      "sizeCategory": "medium",
+      "connectors": [
+        {
+          "id": "room-3-left-door",
+          "roomId": "room-3",
+          "side": "left",
+          "type": "open-passage",
+          "position": 0.4882,
+          "offset": 1.7821,
+          "width": 2
+        },
+        {
+          "id": "room-3-right-door",
+          "roomId": "room-3",
+          "side": "right",
+          "type": "door",
+          "position": 0.2428,
+          "offset": 0.8862,
+          "doorType": "sliding",
+          "width": 1.5
+        },
+        {
+          "id": "room-3-right-door-2",
+          "roomId": "room-3",
+          "side": "right",
+          "type": "door",
+          "position": 0.7077,
+          "offset": 2.583,
+          "doorType": "pocket",
+          "width": 1.5,
+          "door": {
+            "slide": "end"
+          }
+        },
+        {
+          "id": "room-3-bottom-window",
+          "roomId": "room-3",
+          "side": "bottom",
+          "type": "window",
+          "position": 0.518,
+          "offset": 1.036,
+          "window": {
+            "type": "tilt-turn",
+            "sillHeight": 0.8,
+            "headHeight": 2.1,
+            "frameDepth": 0.08
+          },
+          "width": 1.2
+        },
+        {
+          "id": "room-3-top-door",
+          "roomId": "room-3",
+          "side": "top",
+          "type": "door",
+          "position": 0.4789,
+          "offset": 0.9579,
+          "door": {
+            "hinge": "left",
+            "swing": "outward",
+            "openAngle": 85,
+            "tilt": true
+          },
+          "width": 0.9
+        }
+      ],
+      "layout": {
+        "x": 4.45,
+        "y": 0,
+        "width": 2,
+        "height": 3.65,
+        "sizeLocked": true
+      },
+      "floor": "floor-1",
+      "outline": [
+        [
+          0,
+          0
+        ],
+        [
+          0.4,
+          0
+        ],
+        [
+          0.4,
+          0.75
+        ],
+        [
+          1.6,
+          0.75
+        ],
+        [
+          1.6,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          3.65
+        ],
+        [
+          0,
+          3.65
+        ]
+      ]
+    },
+    {
+      "id": "room-4",
+      "name": "Room 4",
+      "type": "other",
+      "sizeCategory": "medium",
+      "connectors": [
+        {
+          "id": "room-4-left-door",
+          "roomId": "room-4",
+          "side": "left",
+          "type": "door",
+          "position": 0.2428,
+          "offset": 0.8862,
+          "doorType": "sliding",
+          "width": 1.5
+        },
+        {
+          "id": "room-4-left-door-2",
+          "roomId": "room-4",
+          "side": "left",
+          "type": "door",
+          "position": 0.7077,
+          "offset": 2.583,
+          "doorType": "pocket",
+          "width": 1.5,
+          "door": {
+            "slide": "end"
+          }
+        },
+        {
+          "id": "room-4-bottom-window",
+          "roomId": "room-4",
+          "side": "bottom",
+          "type": "window",
+          "position": 0.364825,
+          "offset": 1.4593,
+          "window": {
+            "type": "slide-vertical",
+            "sillHeight": 0.8,
+            "headHeight": 2.1,
+            "frameDepth": 0.08
+          },
+          "width": 1.2
+        },
+        {
+          "id": "room-4-bottom-window-2",
+          "roomId": "room-4",
+          "side": "bottom",
+          "type": "window",
+          "position": 0.76035,
+          "offset": 3.0414,
+          "window": {
+            "type": "slide-horizontal",
+            "sillHeight": 0.8,
+            "headHeight": 2.1,
+            "frameDepth": 0.08
+          },
+          "width": 1.2
+        },
+        {
+          "id": "room-4-right-window",
+          "roomId": "room-4",
+          "side": "right",
+          "type": "window",
+          "position": 0.712329,
+          "offset": 2.6,
+          "width": 1.2,
+          "window": {
+            "type": "fixed",
+            "sillHeight": 0.8,
+            "headHeight": 2.1,
+            "frameDepth": 0.08
+          }
+        }
+      ],
+      "layout": {
+        "x": 6.45,
+        "y": 0,
+        "width": 4,
+        "height": 3.65,
+        "sizeLocked": true
+      },
+      "wallHeights": {
+        "top": 3
+      },
+      "floor": "floor-1"
+    },
+    {
+      "id": "room-1-floor-2",
+      "name": "Room 1",
+      "sizeCategory": "medium",
+      "connectors": [
+        {
+          "id": "room-1-floor-2-right-door",
+          "roomId": "room-1-floor-2",
+          "side": "right",
+          "type": "open-passage",
+          "position": 0.3973,
+          "offset": 1.45,
+          "width": 3.65
+        }
+      ],
+      "floor": "floor-2",
+      "layout": {
+        "x": 0,
+        "y": 0,
+        "width": 8,
+        "height": 3.65,
+        "sizeLocked": true
+      },
+      "outline": [
+        [
+          0,
+          0
+        ],
+        [
+          8,
+          0
+        ],
+        [
+          8,
+          2.9
+        ],
+        [
+          7.6,
+          2.9
+        ],
+        [
+          7.6,
+          3.65
+        ],
+        [
+          0,
+          3.65
+        ]
+      ]
+    },
+    {
+      "id": "room-2-floor-2",
+      "name": "Room 2",
+      "type": "other",
+      "sizeCategory": "medium",
+      "connectors": [
+        {
+          "id": "room-2-left-door",
+          "roomId": "room-2-floor-2",
+          "side": "left",
+          "type": "open-passage",
+          "position": 0.3973,
+          "offset": 1.45,
+          "width": 3.65
+        }
+      ],
+      "layout": {
+        "x": 8,
+        "y": 0,
+        "width": 2.5,
+        "height": 3.65,
+        "sizeLocked": true
+      },
+      "outline": [
+        [
+          0,
+          0
+        ],
+        [
+          2.5,
+          0
+        ],
+        [
+          2.5,
+          3.65
+        ],
+        [
+          1.5,
+          3.65
+        ],
+        [
+          1.5,
+          2.9
+        ],
+        [
+          0,
+          2.9
+        ]
+      ],
+      "floor": "floor-2"
+    }
+  ],
+  "relationships": [
+    {
+      "id": "room-1-left-door--room-2-right-door",
+      "connectorA": "room-1-left-door",
+      "connectorB": "room-2-right-door",
+      "importance": "required"
+    },
+    {
+      "id": "room-1-left-door-2--room-2-right-door-2",
+      "connectorA": "room-1-left-door-2",
+      "connectorB": "room-2-right-door-2",
+      "importance": "required"
+    },
+    {
+      "id": "room-1-right-door--room-3-left-door",
+      "connectorA": "room-1-right-door",
+      "connectorB": "room-3-left-door",
+      "importance": "required"
+    },
+    {
+      "id": "room-3-right-door--room-4-left-door",
+      "connectorA": "room-3-right-door",
+      "connectorB": "room-4-left-door",
+      "importance": "required"
+    },
+    {
+      "id": "room-3-right-door-2--room-4-left-door-2",
+      "connectorA": "room-3-right-door-2",
+      "connectorB": "room-4-left-door-2",
+      "importance": "required"
+    },
+    {
+      "id": "room-1-floor-2-right-door--room-2-left-door",
+      "connectorA": "room-1-floor-2-right-door",
+      "connectorB": "room-2-left-door",
+      "importance": "required"
+    }
+  ],
+  "wallAlignments": [],
+  "entityPlacements": [
+    {
+      "id": "room-1-left-door-door-contact",
+      "type": "door-contact",
+      "connectorId": "room-1-left-door"
+    },
+    {
+      "id": "room-1-top-door-door-contact",
+      "type": "door-contact",
+      "connectorId": "room-1-top-door"
+    },
+    {
+      "id": "room-3-right-door-door-contact",
+      "type": "door-contact",
+      "connectorId": "room-3-right-door"
+    },
+    {
+      "id": "room-3-right-door-2-door-contact",
+      "type": "door-contact",
+      "connectorId": "room-3-right-door-2"
+    },
+    {
+      "id": "room-2-bottom-window-window-contact",
+      "type": "window-contact",
+      "connectorId": "room-2-bottom-window"
+    },
+    {
+      "id": "room-1-bottom-window-window-contact",
+      "type": "window-contact",
+      "connectorId": "room-1-bottom-window",
+      "name": "Room 1 South Open"
+    },
+    {
+      "id": "room-3-bottom-window-window-contact",
+      "type": "window-contact",
+      "connectorId": "room-3-bottom-window"
+    },
+    {
+      "id": "room-4-bottom-window-window-contact",
+      "type": "window-contact",
+      "connectorId": "room-4-bottom-window"
+    },
+    {
+      "id": "room-4-bottom-window-2-window-contact",
+      "type": "window-contact",
+      "connectorId": "room-4-bottom-window-2"
+    },
+    {
+      "id": "room-4-right-window-window-contact",
+      "type": "window-contact",
+      "connectorId": "room-4-right-window"
+    },
+    {
+      "id": "room-3-top-door-door-contact",
+      "type": "door-contact",
+      "connectorId": "room-3-top-door"
+    },
+    {
+      "id": "room-1-left-door-2-door-contact",
+      "type": "door-contact",
+      "connectorId": "room-1-left-door-2"
+    },
+    {
+      "id": "room-1-left-door-2-lock",
+      "type": "lock",
+      "connectorId": "room-1-left-door-2"
+    },
+    {
+      "id": "room-1-left-door-2-cover",
+      "type": "cover",
+      "connectorId": "room-1-left-door-2"
+    },
+    {
+      "id": "room-2-top-door-door-contact",
+      "type": "door-contact",
+      "connectorId": "room-2-top-door"
+    },
+    {
+      "id": "room-2-top-door-lock-2",
+      "type": "lock",
+      "connectorId": "room-2-top-door"
+    },
+    {
+      "id": "room-1-bottom-window-window-contact-2",
+      "type": "window-contact",
+      "connectorId": "room-1-bottom-window"
+    },
+    {
+      "id": "room-1-bottom-window-cover",
+      "type": "cover",
+      "connectorId": "room-1-bottom-window"
+    },
+    {
+      "id": "room-3-top-door-door-contact-tilt",
+      "type": "door-contact",
+      "role": "tilt",
+      "connectorId": "room-3-top-door"
+    }
+  ],
+  "floors": [
+    {
+      "id": "floor-1",
+      "name": "Floor 1",
+      "height": 2.4,
+      "elevation": 0
+    },
+    {
+      "id": "floor-2",
+      "name": "Floor 2",
+      "height": 2.4,
+      "elevation": 2.52
+    }
+  ],
+  "stairs": [
+    {
+      "id": "stairs-1",
+      "name": "Stairs 1",
+      "lower": "floor-1",
+      "upper": "floor-2",
+      "x": 7.6,
+      "y": 2.9,
+      "length": 2.1,
+      "width": 0.75,
+      "direction": "right",
+      "fromRoom": "room-4",
+      "toRoom": "room-2-floor-2"
+    }
+  ],
+  "buildingDefaults": {
+    "wallThickness": 0.16,
+    "wallHeight": 2.4,
+    "floorThickness": 0.12
+  },
+  "entitySettings": {
+    "coordinates": "room",
+    "gridStep": 0.1,
+    "resize": "proportional",
+    "checks": {
+      "motion": true,
+      "doorContact": true
+    }
+  }
+}

@@ -1,4 +1,5 @@
 import { ThreeFloorplanCard } from './three-floorplan-card';
+import { ThreeFloorplanCardEditor } from './card-editor';
 
 declare global {
   interface Window {
@@ -8,6 +9,10 @@ declare global {
 
 if (!customElements.get('three-floorplan-card')) {
   customElements.define('three-floorplan-card', ThreeFloorplanCard);
+}
+
+if (!customElements.get('three-floorplan-card-editor')) {
+  customElements.define('three-floorplan-card-editor', ThreeFloorplanCardEditor);
 }
 
 window.customCards = window.customCards ?? [];
